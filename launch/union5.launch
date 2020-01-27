@@ -1,0 +1,8 @@
+<launch>
+  <arg name="arg1" default="3"/>
+  <arg name="arg2" default="4"/>
+  <param name="test" value="$(arg arg1)" type="int"/>
+  <node pkg="ros_tutorials_topic" type="param_test"  name="param_test" output="screen">
+    <param name="test" value="$(arg arg2)" type="int"/>
+  </node>
+</launch>

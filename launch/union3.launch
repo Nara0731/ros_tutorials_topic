@@ -1,0 +1,6 @@
+<launch>
+  <arg name="args" default="5 2"/>
+  <param name="g_operator" value="2"/>
+  <node pkg="ros_tutorials_topic" type="service_server"  name="service_server" output="screen"/>
+  <node pkg="ros_tutorials_topic" type="service_client"  name="service_client" args="$(arg args)" output="screen"/>
+</launch>
